@@ -1,0 +1,149 @@
+.forcast{
+    min-width: 430px;
+}
+.forcast_section{
+    height: 800px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.forcast_section::-webkit-scrollbar
+{
+	width: .2rem;
+	background-color: transparent;
+}
+
+.forcast_section::-webkit-scrollbar-thumb{
+    background-color:var(--accent);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.forcast_section::-webkit-scrollbar-track{
+    background-color:transparent;
+    border: none;
+}
+
+.forcast_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--seperator-color);
+
+}
+
+.forcast_card .forcast_card_left_section{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    border-right: 2px solid var(--seperator-color);
+}
+
+.forcast_card .forcast_card_left_section .forcast_weather_img{
+    height: 4rem;
+}
+
+
+.forcast_card .forcast_card_left_section .forcast_time_and_condition{
+    display: flex;
+    flex-direction: column;
+}
+
+.forcast_card .forcast_card_left_section .forcast_time{
+    font-size: 1.2rem;
+}
+
+.forcast_card .forcast_card_left_section .forcast_condition{
+    font-size: .8rem;
+}
+
+.forcast_card .forcast_card_right_section{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.forcast_card .forcast_card_right_section .forcast_temp{
+    font-size: 2rem;
+}
+
+.forcast_card .forcast_card_right_section .forcast_wind_speed{
+    font-size: .8rem;
+}
+
+.forcast_card .forcast_card_right_section .forcast_wind_and_humidity{
+    display: flex;
+    flex-direction: column;
+}
+
+.forcast_card .forcast_card_right_section .forcast_humidity{
+    font-size: .8rem;
+}
+
+.forcast_card .forcast_card_right_section .forcast_wind_speed{
+    font-size: .8rem;
+}
+
+@media (max-width: 767px ){
+    .forcast{
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+        background-color: transparent;
+        /* height: 600px; */
+    }
+    .forcast_section{
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+        gap: 1rem;
+        width: 100%;
+        padding: 1.2rem 0;
+        background: transparent;
+        overflow-x: visible;
+    }
+    .forcast_section::-webkit-scrollbar{
+	    height: .2rem;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+    .forcast_section::-webkit-scrollbar-thumb{
+	    background-color:var(--accent);
+	    border-radius: 10px;
+        cursor: pointer;
+    }
+    .forcast_section::-webkit-scrollbar-track{
+	    background-color:transparent;
+	    border: none;
+    }
+    .forcast_card{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        gap: 1rem;
+        border-bottom: none;
+        box-shadow: var(--bento-shadow);
+        background-color: var(--primary);
+        border-radius: 10px;
+    }
+    .forcast_card .forcast_card_left_section{
+        border-right: none;
+        flex-direction: column;
+        justify-content: start;
+    }
+}
+
+

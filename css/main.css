@@ -1,0 +1,199 @@
+/* for material font-style default */
+.light-theme{
+    --primary: #ffffff;
+    --secondary: #6B6B6B;
+    --accent: #303030;
+    --primary-font-color: #000000;
+    --secondary-font-color: #5f6368;
+    /* --bento-shadow:0 0 0 1px rgba(0, 0, 0, .04), 0 4px 16px -4px rgba(0, 0, 0, .16); */
+    --bento-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --suggetion-hover-background: rgba(0, 0, 0, 0.05);
+    --search-bar-border-color: rgb(200,200,200);
+    --seperator-color: rgb(235,235,235);
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    min-height: 100%;
+    width: 100%;
+    padding: 2rem 12%;
+    background: linear-gradient(155deg, rgba(0, 179, 255, 0.05) , rgba(255, 230, 0, 0.07) );
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
+main{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+main>div{
+    border-radius: 10px;
+    background-color: var(--primary);
+    box-shadow: var(--bento-shadow);
+}
+
+.current_weather{
+    grid-column: span 3;
+    grid-row: span 2;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.current_weather .top_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    font-size: .9rem;
+}
+.current_weather .top_section .top_left_section{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+    color: var(--secondary-font-color);
+}
+
+.current_weather .current_time{
+    color: var(--primary-font-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.current_weather .select_temp_unit{
+    border: none;
+    outline: none;
+    color: var(--secondary-font-color);
+    background-color: transparent;
+    font-size: .9rem;
+}
+.current_weather .temp_section{
+    font-size: 2.4rem;
+    display: flex;
+    align-items: start;
+}
+.current_weather .temp_section>span{
+    font-size: 1rem;
+    margin-top: .4rem;
+    margin-left: 5px;
+    font-weight: 500;
+    color: var(--secondary-font-color);
+}
+
+.current_weather .middle_section{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.current_weather .middle_section .condition_section{
+    display: flex;
+    flex-direction: column;
+    font-size: .9rem;
+    color: var(--secondary-font-color);
+}
+
+.current_weather .middle_section .condition_section .feels_like{
+    color: var(--primary-font-color);
+}
+
+.current_weather .current_weather_icon{
+    height: 4rem;
+}
+
+.forcast{
+    grid-column: span 2;
+    grid-row: span 6;
+    padding: 1.2rem;
+}
+.weather_details{
+    grid-column: span 1;
+    grid-row: span 1;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.weather_details .details_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+    font-size: .9rem;
+    color: var(--secondary-font-color);
+}
+
+.weather_details .icon_section{
+    font-size: 1.1rem;
+    color: var(--secondary-font-color);
+}
+
+.weather_details .details_section> span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-font-color);
+}
+
+.sun_and_moon_summary{
+    grid-column: span 3;
+    grid-row: span 2;
+    padding: 8.2rem;
+}
+
+@media (max-width: 767px ){
+    .container{
+        padding: 1rem 1rem;
+    }
+    main {
+        grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
+        grid-auto-rows: min-content; /* Let the row height adjust automatically */
+    }
+    
+    .current_weather {
+        grid-column: span 2; /* Full width */
+        grid-row: 1; /* First row */
+    }
+
+    .weather_details {
+        grid-column: span 1; /* Keep in individual columns */
+        grid-row: auto; /* Auto-row placement */
+    }
+
+    .forcast {
+        grid-column: span 2; /* Full width */
+        grid-row: 5; /* Place in the second-last row */
+    }
+
+    .sun_and_moon_summary {
+        grid-column: span 2; /* Full width */
+        grid-row: 6; /* Last row */
+    }
+}

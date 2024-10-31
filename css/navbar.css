@@ -1,0 +1,129 @@
+nav{
+    display: grid;
+    grid-template-columns: .5fr .5fr 2fr .5fr;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary);
+    border-radius: 10px;
+    box-shadow: var(--bento-shadow);
+    padding: 0.8rem 1.2rem;
+}
+
+nav .logo_section{
+    display: flex;
+    /* justify-content: center; */
+}
+
+nav .location_section{
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    font-size: 16px;
+    margin: 0 1.4rem;
+}
+
+nav.location_name{
+    font-size: 16px;
+}
+
+nav .logo{
+    height: 3rem;
+    margin-right: 1rem;
+}
+nav .logo_name{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #0866ff;
+}
+
+nav .location_search_block{
+    position: relative;
+    border: 1px solid var(--search-bar-border-color);
+    border-radius: 8px;
+    max-width: 750px;
+    display: flex;
+    align-items: center;
+    /* background-color: #303030; */
+}
+
+.my_location_icon,
+.search_icon{
+    margin:  0 .4rem;
+}
+nav input{
+    flex-grow: 1;
+    border: none;
+    min-width: 100px;
+    width: 100%;
+    font-size: medium;
+    height: 40px;
+}
+nav input:focus{
+    outline: none;
+}
+
+.location_suggation_box{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 3rem;
+    background-color: var(--primary);
+    list-style-type: none;
+    box-shadow: var(--bento-shadow);
+    border-radius: 8px;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.location_suggation_box.show_suggetion{
+    display: block;
+}
+
+.location_suggation_box li{
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    cursor: default;
+}
+.location_suggation_box li:hover{
+    background-color: var(--suggetion-hover-background);
+}
+
+nav #themeSwitcher {
+    height:42px;
+    max-width: 120px;
+    padding: 0 10px;
+    outline: none;
+    color: var(--primary);
+    border: none;
+    background: var(--accent);
+    border-radius: 8px;
+    justify-self: end;
+}
+
+@media (max-width: 767px) {
+    nav{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        row-gap: .5rem;
+    }
+    .location_search_block{
+        grid-column: 1 / span 3;
+        grid-row: 2;
+    }
+    .location_suggation_box{
+        max-height: 250px;
+        overflow-y: scroll;
+    }
+    .location_section{
+        display: flex;
+        justify-content: center;
+    }
+    #themeSwitcher{
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: center;
+    }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- google-Material-icons-cdn links -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- font-cdn-link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- main-styleSheet -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/forcast.css">
+  </head>
+  <body>
+    <div class="container">
+    <!-- NavBar --> 
+    <nav>
+      <div class="logo_section"><span class="logo_name">SkyCast</span></div>
+      <div class="location_section">
+        <span class="material-symbols-outlined location_icon">location_on</span>
+        <span class="location_name">Majdia,India</span>
+      </div>
+      <div class="location_search_block">
+        <span class="material-symbols-outlined search_icon">search</span>
+        <input class="location_auto_Suggation_input" type="text" autocomplete="off" placeholder="Search Location...">
+        <ul class="location_suggation_box"></ul>
+        <span class="material-symbols-outlined my_location_icon">my_location</span>
+      </div>
+      <!-- Theme changing section -->
+      <select id="themeSwitcher">
+        <option value="theme-light">Light</option>
+        <option value="theme-dark">Dark</option>
+        <option value="theme-ocean">Ocean</option>
+        <option value="theme-sepia">Sepia</option>
+      </select>
+    </nav>
+    <!-- Main-section -->
+     <main>
+      <div class="current_weather">
+        <div class="top_section">
+          <span class="top_left_section">Current Weather <span class="current_time">2:59PM</span></span>
+          <select name="temp_unit" id="" class="select_temp_unit">
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Celsius">Celsius</option>
+          </select>
+        </div>
+        <div class="middle_section">
+          <img class="current_weather_icon" src="assets/img/logo.png" alt="">
+          <div class="temp_section">12 <span>&degF</span></div>
+          <div class="condition_section">
+            <span class="condition">Rainy</span>
+            <span class="feels_like">Feels Like 35&deg</span>
+          </div>
+        </div>
+        <div class="bottom_section">There will be mostly sunny skies. The high will be 35&deg</div>
+      </div>
+      <!-- forcast -->
+      <div class="forcast">
+        <div class="tab_section">
+          <span class="tab_name">12 Hour Forcast</span>
+          <span class="tab_name">5 Days Forcast</span>
+        </div>
+        <div class="forcast_section">
+          <div class="forcast_card">
+            <div class="forcast_card_left_section">
+              <img src="assets/img/logo.png" class="forcast_weather_img" alt="">
+              <span class="forcast_time_and_condition">
+                <span class="forcast_time">12:00PM</span>
+                <span class="forcast_condition">Mostly Cloudy</span>
+              </span>
+            </div>
+            <div class="forcast_card_right_section">
+              <span class="forcast_temp">35&deg</span>
+              <span class="forcast_wind_and_humidity">
+                <span class="forcast_wind_speed">wind: 12 mph</span>
+                <span class="forcast_humidity">humidity: 54%</span>
+              </span>
+            </div>
+          </div>
+          <div class="forcast_card">
+            <div class="forcast_card_left_section">
+              <img src="assets/img/logo.png" class="forcast_weather_img" alt="">
+              <span class="forcast_time_and_condition">
+                <span class="forcast_time">12:00PM</span>
+                <span class="forcast_condition">Mostly Cloudy</span>
+              </span>
+            </div>
+            <div class="forcast_card_right_section">
+              <span class="forcast_temp">35&deg</span>
+              <span class="forcast_wind_and_humidity">
+                <span class="forcast_wind_speed">wind: 12 mph</span>
+                <span class="forcast_humidity">humidity: 54%</span>
+              </span>
+            </div>
+          </div>
+          <div class="forcast_card">
+            <div class="forcast_card_left_section">
+              <img src="assets/img/logo.png" class="forcast_weather_img" alt="">
+              <span class="forcast_time_and_condition">
+                <span class="forcast_time">12:00PM</span>
+                <span class="forcast_condition">Mostly Cloudy</span>
+              </span>
+            </div>
+            <div class="forcast_card_right_section">
+              <span class="forcast_temp">35&deg</span>
+              <span class="forcast_wind_and_humidity">
+                <span class="forcast_wind_speed">wind: 12 mph</span>
+                <span class="forcast_humidity">humidity: 54%</span>
+              </span>
+            </div>
+          </div>
+          <div class="forcast_card">
+            <div class="forcast_card_left_section">
+              <img src="assets/img/logo.png" class="forcast_weather_img" alt="">
+              <span class="forcast_time_and_condition">
+                <span class="forcast_time">12:00PM</span>
+                <span class="forcast_condition">Mostly Cloudy</span>
+              </span>
+            </div>
+            <div class="forcast_card_right_section">
+              <span class="forcast_temp">35&deg</span>
+              <span class="forcast_wind_and_humidity">
+                <span class="forcast_wind_speed">wind: 12 mph</span>
+                <span class="forcast_humidity">humidity: 54%</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="air_quality weather_details">
+          <span class="material-symbols-outlined icon_section">airware</span>
+          <span class="details_section">
+            Air Quality
+            <span class="value_section">156</span>
+          </span>
+      </div>
+      <div class="wind weather_details">
+        <span class="material-symbols-outlined icon_section">air</span>
+        <span class="details_section">
+          Wind
+          <span class="value_section">1 mph</span>
+        </span>
+      </div>
+      <div class="humidity weather_details">
+        <span class="material-symbols-outlined icon_section">water_drop</span>
+        <span class="details_section">
+          Humidity
+          <span class="value_section">54%</span>
+        </span>
+      </div>
+      <div class="visibility weather_details">
+        <span class="material-symbols-outlined icon_section">visibility</span>
+        <span class="details_section">
+          Visibility
+          <span class="value_section">3 mi</span>
+        </span>
+      </div>
+      <div class="pressure weather_details">
+        <span class="material-symbols-outlined icon_section">device_thermostat</span>
+        <span class="details_section">
+          Air Pressure
+          <span class="value_section">27.65 in</span>
+        </span>
+      </div>
+      <div class="uv_index weather_details">
+        <span class="material-symbols-outlined icon_section">mode_dual</span>
+        <span class="details_section">
+          WindGust
+          <span class="value_section">38 km/h</span>
+        </span>
+    </div>
+    <!-- sun and moon summary -->
+      <div class="sun_and_moon_summary">sun_and_moon_summary</div>
+     </main>
+    <script src="./js/location_auto_Suggation.js"></script>
+  </div>
+  </body>
+</html>
