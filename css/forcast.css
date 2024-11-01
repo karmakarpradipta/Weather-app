@@ -99,7 +99,7 @@
         box-shadow: none;
         padding: 0;
         background-color: transparent;
-        /* height: 600px; */
+        min-width: 0;
     }
     .forcast_section{
         height: auto;
@@ -107,13 +107,15 @@
         flex-direction: row;
         overflow-y: hidden;
         gap: 1rem;
-        width: 100%;
-        padding: 1.2rem 0;
+        width: 100vw;
+        padding: 1.2rem;
         background: transparent;
         overflow-x: visible;
+        margin-left:-1rem;
+        /* padding-left: 1rem; */
     }
     .forcast_section::-webkit-scrollbar{
-	    height: .2rem;
+	    height: .0rem;
         border-radius: 5px;
         background-color: transparent;
     }
